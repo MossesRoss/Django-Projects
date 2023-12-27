@@ -5,6 +5,18 @@ Task Tracker API using DRF. The purpose is to provide a programmatic way to mana
 How It Works:
 The API is a set of URLs that we can interact with. It understands and responds to certain commands, like adding a new task, updating an existing task, or fetching a list of tasks, and deleting a task.
 
+To start:
+Navigate to the directory using cd in CMD
+$ cd mosses
+and then (Make sure python, Django and Djangorestframwork are installed)
+$ python manage.py makeimigrations
+$ python manage.py imigrate
+$ python manage.py runserver
+Now the server will be running...
+
+To look at the tasks which are already there:
+curl http://127.0.0.1:8000/api/tasks/
+
 Adding a Task:
  We add tasks using a simple command line or script. For example:
 curl -X POST http://127.0.0.1:8000/api/tasks/ -H "Content-Type: application/json" -d '{"title": "New Task", "description": "Description for the new task", "completed": false}'
